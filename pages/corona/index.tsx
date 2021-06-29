@@ -1,7 +1,7 @@
 import { coronaApi, ipApi } from "../../config/config";
 import { countries } from "../../data/countries";
 
-import { useFetch } from "../../libs/useFetch";
+import { fetchData } from "../../libs/useFetch";
 import { useEffect, useState } from "react";
 
 import Head from "next/dist/next-server/lib/head";
@@ -48,7 +48,7 @@ export default function CoronaStats({
 
   const onCountryChange = async (passedCountry: string) => {
     setCountry(passedCountry);
-    setCountryData(await useFetch(coronaApi + "/countries/" + passedCountry));
+    setCountryData(await fetchData(coronaApi + "/countries/" + passedCountry));
   };
 
   return (
@@ -115,16 +115,16 @@ export default function CoronaStats({
   );
 }
 
-export async function getServerSideProps({ params }: any) {
-  const worldwide = await useFetch(coronaApi + "/all");
-  const liveReport = await useFetch(coronaApi + "/countries?sort=todayCases");
-  const topCountries = await useFetch(coronaApi + "/countries?sort=cases");
-  const ipDetail = await useFetch(ipApi);
+export const getServerSideProps = async ({ params }: any) => {
+  const worldwide = await fetchData(coronaApi + "/all");
+  const liveReport = await fetchData(coronaApi + "/countries?sort=todayCases");
+  const topCountries = await fetchData(coronaApi + "/countries?sort=cases");
+  const ipDetail = await fetchData(ipApi);
 
   const countryCode = ipDetail.countryCode;
-  const countryWise = await useFetch(coronaApi + "/countries/" + countryCode);
+  const countryWise = await fetchData(coronaApi + "/countries/" + countryCode);
 
   return {
     props: { worldwide, countryWise, liveReport, topCountries },
   };
-}
+};

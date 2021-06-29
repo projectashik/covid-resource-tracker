@@ -39,5 +39,9 @@ export const ResourceCard = ({
       <p className="text-2xl text-white">{title}</p>
     </div>
   );
-  return <LinkSelector isNormalLink={normalLink} href={href} children={ele} />;
+  return (
+    <LinkSelector isNormalLink={normalLink} href={href}>
+      {ele}
+    </LinkSelector>
+  );
 };

@@ -89,13 +89,10 @@ export default function ResourcesPage() {
       </Head>
       <div className="flex flex-col items-center">
         <div className="flex flex-col items-center">
-          <Link href="/panel/resources/add">
-            <a
-              href="/panel/resources/add"
-              className="bg-red-400 px-3 py-2 text-white text-sm focus:ring-2 ring-offset-4 ring-red-400"
-            >
+          <Link href="/panel/resources/add" passHref={true}>
+            <button className="bg-red-400 px-3 py-2 text-white text-sm focus:ring-2 ring-offset-4 ring-red-400">
               Add Resource
-            </a>
+            </button>
           </Link>
           <p className="capitalize font-bold text-4xl my-5 text-gray-900 border-b-4 border-dashed border-red-400">
             {type}
