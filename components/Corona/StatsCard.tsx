@@ -1,4 +1,3 @@
-import { FontawesomeObject } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Card } from "./Card";
 
@@ -9,7 +8,7 @@ export const StatsCard = (props: StatsCardPropType) => {
         <div>
           <p>{props.title}</p>
           <span className={"text-3xl " + props.colorClass}>
-            {props.value || props.value == "0" ? props.value : "N/A"}
+            {props.value || props.value === 0 ? props.value : "N/A"}
           </span>
         </div>
         <FontAwesomeIcon
@@ -24,7 +23,7 @@ export const StatsCard = (props: StatsCardPropType) => {
 
 interface StatsCardPropType {
   title: string;
-  value: string;
+  value: number;
   icon: any;
   colorClass: string;
 }

@@ -1,0 +1,7 @@
+.formGroup {
+  @apply flex flex-col;
+}
+
+.formInput {
+  @apply bg-gray-200 placeholder-gray-500 p-3 mt-2 focus:ring-4 focus:outline-none ring-red-400;
+}

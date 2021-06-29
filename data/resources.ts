@@ -1,0 +1,8 @@
+import { ResourceType } from "../shared/types/ResourceType";
+
+export const resources: ResourceType[] = [
+    { type: 'ambulance', country: 'Nepal', adderssTwo: 'Bagar', state: "Gandaki", city: 'Pokhara', postalCode: 33700, addressOne: "Hospital Chowk", organization: "Manipal Hospital", contactNo: "+977 9866344801", contactEmail: "projectashik@gmail.com", addedBy: { email: 'projectashik@gmail.com' } },
+    { type: 'blood', country: 'Nepal', state: "Gandaki", city: 'Pokhara', postalCode: 33700, addressOne: "Hospital Chowk", organization: "Manipal Hospital", description: 'blood group: A+', contactNo: "+977 9866344801", contactEmail: "projectashik@gmail.com", addedBy: { email: 'projectashik@gmail.com' } },
+    { type: 'plasma', country: 'Nepal', state: "Gandaki", city: 'Kathmandy', postalCode: 33700, addressOne: "Sigha Durbar Marga", organization: "Gandaki Hospital", description: "Group", contactNo: "+977 9866344801", contactEmail: "projectashik@gmail.com", addedBy: { email: 'projectashik@gmail.com' } },
+    { type: 'food', country: "Nepal", state: "Gandaki", city: "Lalitpur", postalCode: 10000, addressOne: "Lalitpur Durbar marga", description: "Description", contactNo: "+977 9866344801", contactEmail: "projectashik@gmail.com", addedBy: { email: 'projectashik@gmail.com' } },
+    { type: 'medicine', country: "Nepal", state: "Gandaki", city: "Janakpur", postalCode: 50000, addressOne: "Tudhikhel", organization: "Medical", description: "Description here", contactNo: "+977 9866344801", contactEmail: "projectashik@gmail.com", addedBy: { email: 'projectashik@gmail.com' } },];
