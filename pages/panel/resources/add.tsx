@@ -8,6 +8,7 @@ import NoSSR from "../../../components/NoSSR";
 import { withPageAuthRequired } from "@auth0/nextjs-auth0";
 import toast from "react-hot-toast";
 import Head from "next/head";
+import Link from "next/link";
 export default function AddResouce({ user }: { user: UserProfile }) {
   const [loading, setLoading] = useState(false);
   const [values, setValues] = useState({
@@ -102,6 +103,9 @@ export default function AddResouce({ user }: { user: UserProfile }) {
         <title>Add Resource - Covid Resource Tracker</title>
       </Head>
       <div className="flex flex-col items-center">
+        <Link href="/panel">
+          <button className="bg-red-400 px-2 py-1">Go to Dashboard</button>
+        </Link>
         <div className="flex flex-col items-center">
           <p className="capitalize font-bold text-4xl my-5 text-gray-900 border-b-4 border-dashed border-red-400">
             Add Resource
