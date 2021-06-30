@@ -6,9 +6,6 @@ import { UserProvider } from "@auth0/nextjs-auth0";
 import { Toaster } from "react-hot-toast";
 
 function MyApp({ Component, pageProps }: AppProps) {
-  const url = process.env.DB_URL;
-  const user = process.env.DB_USER;
-  const password = process.env.DB_PASSWORD;
   return (
     <UserProvider>
       <Toaster reverseOrder={false}></Toaster>

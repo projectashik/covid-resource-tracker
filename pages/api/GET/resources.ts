@@ -2,11 +2,11 @@ import { NextApiResponse, NextApiRequest } from "next";
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse): Promise<any> {
   const { type } = req.query;
-  const request = await fetch(<any>process.env.DB_URL, {
+  const request = await fetch(<any>process.env.NEXT_PUBLIC_DB_URL, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
-      Authorization: `Basic cHJvamVjdGFzaGlrOlRmYndqcT9AMzY5`
+      Authorization: `Basic ${process.env.NEXT_PUBLIC_DB_AUTHORIZATION}`
     },
     body: JSON.stringify({
       operation: "sql",
