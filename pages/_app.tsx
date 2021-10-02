@@ -153,6 +153,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css'
           rel='stylesheet'
         />
+        <script src='https://feedlr.vercel.app/init.js' defer></script>
       </Head>
       <Toaster reverseOrder={false}></Toaster>
       <Layout>
