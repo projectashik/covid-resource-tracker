@@ -14,6 +14,7 @@
     "@fortawesome/free-solid-svg-icons": "^5.15.3",
     "@fortawesome/react-fontawesome": "^0.1.14",
     "axios": "^0.21.1",
+    "mapbox-gl": "^2.4.1",
     "next": "11.0.1",
     "next-pwa": "^5.3.1",
     "nextjs-progressbar": "^0.0.11",
@@ -27,6 +28,7 @@
     "use-async-effect": "^2.2.3"
   },
   "devDependencies": {
+    "@types/mapbox-gl": "^2.4.2",
     "@types/react": "17.0.11",
     "@types/react-infinite-scroller": "^1.2.1",
     "@types/react-select": "^4.0.16",

@@ -12,7 +12,7 @@ export const Navbar = () => {
     setMenuOpen(!menuOpen);
   };
   return (
-    <nav className='bg-white shadow py-3'>
+    <nav className='bg-white shadow py-3' style={{ zIndex: 50000 }}>
       <div className='relative container mx-auto px-3 md:px-1 flex flex-col md:flex-row md:justify-between md:items-center'>
         <Link href='/'>
           <a className='text-2xl text-red-500'>Covid Resource Tracker</a>
@@ -27,6 +27,9 @@ export const Navbar = () => {
           </li>
           <li>
             <NavLink href='/corona'>Covid Data</NavLink>
+          </li>
+          <li>
+            <NavLink href='/risk'>Risk Check</NavLink>
           </li>
           {!user && (
             <li>
