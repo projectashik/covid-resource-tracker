@@ -29,7 +29,9 @@ export const Navbar = () => {
             <NavLink href='/corona'>Covid Data</NavLink>
           </li>
           <li>
-            <NavLink href='/risk'>Risk Check</NavLink>
+            <NavLink href='https://covid-risk-checker.vercel.app/'>
+              Risk Check
+            </NavLink>
           </li>
           {!user && (
             <li>

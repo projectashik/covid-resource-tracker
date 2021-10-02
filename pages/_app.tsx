@@ -149,6 +149,10 @@ function MyApp({ Component, pageProps }: AppProps) {
           href='icons/apple-splash-1136-640.jpg'
           media='(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)'
         />
+        <link
+          href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css'
+          rel='stylesheet'
+        />
       </Head>
       <Toaster reverseOrder={false}></Toaster>
       <Layout>

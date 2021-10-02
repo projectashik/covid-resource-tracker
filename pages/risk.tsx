@@ -98,10 +98,6 @@ export default function Risk() {
   return (
     <>
       <Head>
-        <link
-          href='https://api.mapbox.com/mapbox-gl-js/v2.4.1/mapbox-gl.css'
-          rel='stylesheet'
-        />
         <title>Risk Calculator Page</title>
       </Head>
       <main>
